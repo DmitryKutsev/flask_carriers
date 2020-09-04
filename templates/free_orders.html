@@ -1,0 +1,17 @@
+<html>
+<body>
+ <h1>Free orders</h1>
+ <a href="{{url_for('showFreeeOrders')}}">
+   <button>Добавить книгу</button>
+ </a>
+ <ol>
+   {% for order in orders %}
+    <li> {{order.id}}  Айди </li>
+   <li> {{order.forwarder}} Отправитель </li>
+   <li> {{order.description}}  Описание </li>
+   <li> {{order.summ}} .р  Стоимость </li>
+
+  {% endfor %}
+ </ol>
+</body>
+</html>
