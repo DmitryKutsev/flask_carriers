@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 # импортируем классы Book и Base из файла database_setup.py
 from database_setup import Carrier, Forwarder, Base, FreeeOrder
 
-engine = create_engine('sqlite:///logistic.db')
+engine = create_engine('sqlite:///logistic.db', connect_args={'check_same_thread': False})
 
 Base.metadata.bind = engine
 
