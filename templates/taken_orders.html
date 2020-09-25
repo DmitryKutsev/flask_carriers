@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+     <h1>Выполняемые заказы</h1>
+     <ul class="list-group">
+       {% for order in orders %}
+        <li class="list-group-item active"> Айди: </li>
+        <li class="list-group-item">  {{order.id}} </li>
+        <li class="list-group-item active"> Отправитель: </li>
+        <li class="list-group-item">    {{order.forwarder}}</li>
+        <li class="list-group-item active"> Стоимость(руб): </li>
+        <li class="list-group-item"> {{order.value}}  </li>
+
+       <br><br><br>
+
+      {% endfor %}
+     </ul>
+{% endblock %}

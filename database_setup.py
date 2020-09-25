@@ -34,7 +34,7 @@ class Forwarder(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
 
-class FreeeOrder(Base):
+class FreeOrder(Base):
     __tablename__ = 'free_order'
 
     id = Column(Integer, primary_key=True)
